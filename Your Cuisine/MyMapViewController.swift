@@ -22,13 +22,14 @@ class MyMapViewController: UIViewController, GMSPlacePickerViewControllerDelegat
     
      var restaurant: Restaurant?
 //    @IBOutlet weak var RestaurantNameInLocation: UILabel!
-    
+    var NewFood : String?
     
     @IBOutlet weak var TheLocation: UILabel!
     @IBOutlet weak var restaurantNameLabel: UILabel!
     @IBOutlet weak var TheOrder: UILabel!
    
     
+    @IBOutlet weak var TheOrderName: UILabel!
     @IBOutlet weak var LocationTextField: UITextField!
     
 //    @IBOutlet weak var mapView: UIView!
@@ -105,6 +106,8 @@ class MyMapViewController: UIViewController, GMSPlacePickerViewControllerDelegat
         
         self.restaurantNameLabel.text = restaurant?.RName
         self.view.addSubview(self.restaurantNameLabel)
+        
+        self.TheOrder?.text = NewFood
 
         
 //        

@@ -10,7 +10,6 @@
 		442FDD4A6A8AC4959E4E73B7 /* Pods_Your_CuisineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7B22CBF1A1A562D4E2E09F /* Pods_Your_CuisineUITests.framework */; };
 		9694D679104AF3140114BCBD /* Pods_Your_CuisineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E06F76456F7C72A351C008 /* Pods_Your_CuisineTests.framework */; };
 		BFB5116054F4BD54105C4439 /* Pods_Your_Cuisine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB6A228BEE4B5B09327495C /* Pods_Your_Cuisine.framework */; };
-		DD3336981F49889A00A44AA6 /* Restaurant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3336971F49889A00A44AA6 /* Restaurant.storyboard */; };
 		DD70ABBB1F4A9AD700CAF0B8 /* RestaureantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD70ABBA1F4A9AD700CAF0B8 /* RestaureantDetailsViewController.swift */; };
 		DD70ABBD1F4AD38C00CAF0B8 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD70ABBC1F4AD38C00CAF0B8 /* Restaurant.swift */; };
 		DD70ABBF1F4AD5C500CAF0B8 /* RestaurantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD70ABBE1F4AD5C500CAF0B8 /* RestaurantService.swift */; };
@@ -20,6 +19,7 @@
 		DD70ABCC1F4C4DE000CAF0B8 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD70ABCB1F4C4DE000CAF0B8 /* MenuTableViewCell.swift */; };
 		DD70ABCE1F4C641900CAF0B8 /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD70ABCD1F4C641900CAF0B8 /* OrderService.swift */; };
 		DDBFDFF51F4D91A300F2FC61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBFDFF41F4D91A300F2FC61 /* Main.storyboard */; };
+		DDBFDFF71F4DB6DA00F2FC61 /* Restaurant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBFDFF61F4DB6DA00F2FC61 /* Restaurant.storyboard */; };
 		DDC1328F1F41ACF200EC59CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC1328E1F41ACF200EC59CE /* AppDelegate.swift */; };
 		DDC132961F41ACF200EC59CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDC132951F41ACF200EC59CE /* Assets.xcassets */; };
 		DDC132A41F41ACF200EC59CE /* Your_CuisineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC132A31F41ACF200EC59CE /* Your_CuisineTests.swift */; };
@@ -68,7 +68,6 @@
 		A352316EEE49CA4AE9B3CB75 /* Pods-Your CuisineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Your CuisineUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Your CuisineUITests/Pods-Your CuisineUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2E06F76456F7C72A351C008 /* Pods_Your_CuisineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Your_CuisineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9CA69B905236A0A3EB5B70D /* Pods-Your CuisineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Your CuisineTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Your CuisineTests/Pods-Your CuisineTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DD3336971F49889A00A44AA6 /* Restaurant.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Restaurant.storyboard; path = "../../../Documents/MakeSchoolProjects/YourCuisine/Your Cuisine/Restaurant.storyboard"; sourceTree = "<group>"; };
 		DD70ABBA1F4A9AD700CAF0B8 /* RestaureantDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaureantDetailsViewController.swift; sourceTree = "<group>"; };
 		DD70ABBC1F4AD38C00CAF0B8 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		DD70ABBE1F4AD5C500CAF0B8 /* RestaurantService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantService.swift; sourceTree = "<group>"; };
@@ -78,6 +77,7 @@
 		DD70ABCB1F4C4DE000CAF0B8 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		DD70ABCD1F4C641900CAF0B8 /* OrderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderService.swift; sourceTree = "<group>"; };
 		DDBFDFF41F4D91A300F2FC61 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DDBFDFF61F4DB6DA00F2FC61 /* Restaurant.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Restaurant.storyboard; sourceTree = "<group>"; };
 		DDC1328B1F41ACF200EC59CE /* Your Cuisine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Your Cuisine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC1328E1F41ACF200EC59CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDC132951F41ACF200EC59CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 			children = (
 				DDBFDFF41F4D91A300F2FC61 /* Main.storyboard */,
 				DDC132CB1F41BB3E00EC59CE /* Login.storyboard */,
-				DD3336971F49889A00A44AA6 /* Restaurant.storyboard */,
+				DDBFDFF61F4DB6DA00F2FC61 /* Restaurant.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -408,10 +408,10 @@
 			files = (
 				DDC132961F41ACF200EC59CE /* Assets.xcassets in Resources */,
 				DDC132C21F41B70200EC59CE /* LaunchScreen.storyboard in Resources */,
+				DDBFDFF71F4DB6DA00F2FC61 /* Restaurant.storyboard in Resources */,
 				DDC132CC1F41BB3E00EC59CE /* Login.storyboard in Resources */,
 				DDBFDFF51F4D91A300F2FC61 /* Main.storyboard in Resources */,
 				DDC132C51F41B77400EC59CE /* GoogleService-Info.plist in Resources */,
-				DD3336981F49889A00A44AA6 /* Restaurant.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

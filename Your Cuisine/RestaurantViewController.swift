@@ -28,6 +28,7 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         if segue.identifier == "toSetLocationViewController" {
             let destinationVC = segue.destination as! MyMapViewController
             let index = self.TableView.indexPathForSelectedRow?.row
+            destinationVC.NewFood = foods[index!]
             destinationVC.restaurant = self.restaurant
         }
     }

@@ -273,6 +273,7 @@
                         <outlet property="LocationTextField" destination="lCL-iv-q5E" id="fpW-3F-qW8"/>
                         <outlet property="TheLocation" destination="QR9-Od-EKq" id="7A3-uc-8jO"/>
                         <outlet property="TheOrder" destination="SFh-hf-NMg" id="saS-Tp-dfe"/>
+                        <outlet property="TheOrderName" destination="SFh-hf-NMg" id="val-tN-wNh"/>
                         <outlet property="label" destination="QR9-Od-EKq" id="6m8-R2-2FE"/>
                         <outlet property="restaurantNameLabel" destination="hc0-un-Pgc" id="7Ss-zX-DXv"/>
                     </connections>
