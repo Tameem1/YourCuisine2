@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>79185192694-uskgh1e0dqnsei72d5dsq4r559d2oqut.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.79185192694-uskgh1e0dqnsei72d5dsq4r559d2oqut</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBk3ZzACzff6BBDsUngw08xPdMlh5H1UsU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>79185192694</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.makeschool.Your-Cuisine</string>
+	<key>PROJECT_ID</key>
+	<string>your-cuisine</string>
+	<key>STORAGE_BUCKET</key>
+	<string>your-cuisine.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:79185192694:ios:55bfb2f5a8fce549</string>
+	<key>DATABASE_URL</key>
+	<string>https://your-cuisine.firebaseio.com</string>
+</dict>
+</plist>
