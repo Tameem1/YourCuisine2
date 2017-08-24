@@ -67,9 +67,6 @@
                     <navigationItem key="navigationItem" title="Orders" id="IEQ-zF-2eL">
                         <barButtonItem key="backBarButtonItem" title=" " id="lrc-75-Zap"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="tableView2" destination="w7I-5i-LSD" id="Oml-Rq-o0Y"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3p4-Wb-BNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

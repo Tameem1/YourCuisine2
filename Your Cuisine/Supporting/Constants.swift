@@ -19,7 +19,9 @@ struct Constants {
     
     struct UserDefaults {
         static let currentUser = "currentUser"
+        static let currentRestaurant = "currentRestaurant"
         static let uid = "uid"
+        static let restaurantID = "restaurantId"
         static let username = "username"
         static let phoneNumber = "phoneNumber"
         static let RName = "RName"

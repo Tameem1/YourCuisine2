@@ -71,28 +71,28 @@ class Restaurant: NSObject {
     // 2
     static var current: Restaurant {
         // 3
-        guard let currentUser = _current else {
+        guard let currentRestaurant = _current else {
             fatalError("Error: current user doesn't exist")
         }
         
         // 4
-        return currentUser
+        return currentRestaurant
     }
     
     // MARK: - Class Methods
     
     // 5
-    class func setCurrent(_ user: Restaurant, writeToUserDefaults: Bool = false) {
+    class func setCurrent(_ restaurant: Restaurant, writeToUserDefaults: Bool = false) {
         // 2
         if writeToUserDefaults {
             // 3
-            let data = NSKeyedArchiver.archivedData(withRootObject: user)
+            let data = NSKeyedArchiver.archivedData(withRootObject: restaurant)
             
             // 4
-            UserDefaults.standard.set(data, forKey: Constants.UserDefaults.currentUser)
+            UserDefaults.standard.set(data, forKey: Constants.UserDefaults.currentRestaurant)
         }
         
-        _current = user
+        _current = restaurant
     }
 }
 
@@ -100,14 +100,9 @@ class Restaurant: NSObject {
 
 extension Restaurant: NSCoding {
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(uid, forKey: Constants.UserDefaults.uid)
+        aCoder.encode(uid, forKey: Constants.UserDefaults.restaurantID)
         aCoder.encode(RNumber, forKey: Constants.UserDefaults.RNumber)
         aCoder.encode(RName, forKey: Constants.UserDefaults.RName)
         aCoder.encode(OpenCloseTime, forKey: Constants.UserDefaults.OpenCloseTime)
-
-        
-        
-        
-        
     }
 }

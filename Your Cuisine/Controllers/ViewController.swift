@@ -19,17 +19,28 @@ import FirebaseDatabase
 class ViewController: UITableViewController {
     var myOrders: [Orders] = []
 
-    @IBOutlet var tableView2: UITableView!
+//    @IBOutlet var tableView2: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView2.delegate = self
-        self.tableView2.dataSource = self
-        self.usernameLabel.text = myOrders?.username
+//        self.tableView2.delegate = self
+//        self.tableView2.dataSource = self
+        
+        
         
 
         
-        let ref = Database.database().reference().child("Orders")
+        
+        func numberOfSections(in tableView: UITableView) -> Int {
+            return 1
+        }
+
+       
+        }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        let ref = Database.database().reference().child("restaurants").child("tameem's Pizza").child("Orders")
         ref.observeSingleEvent(of: .value, with: { snapshot in
             var newOrders: [Orders] = []
             for child in snapshot.children {
@@ -40,28 +51,25 @@ class ViewController: UITableViewController {
             self.tableView.reloadData()
         })
         
-        func numberOfSections(in tableView: UITableView) -> Int {
-            return 1
-        }
-
-       
-        }
+    }
+    
+    
     // 1
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myOrders.count
     }
     
-    // 2
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // 3
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menu", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menu", for: indexPath) as! ListCellViewController
         
-        // 4
-        cell.textLabel?.text = ""
         
-        // 5
+       cell.addressLabel.text = myOrders[indexPath.row].username
+        
+      
+        
         return cell
-    
+        
     }
     @IBAction func acceptButtonTapped(_ sender: Any) {
     }

@@ -75,7 +75,13 @@ extension AppDelegate {
             let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
             let user = NSKeyedUnarchiver.unarchiveObject(with: userData) as? User {
             
+            let RestaurantData = UserDefaults.standard.object(forKey: Constants.UserDefaults.currentRestaurant) as? Data
+            let restaurant = NSKeyedUnarchiver.unarchiveObject(with: RestaurantData!) as? Restaurant
+
+            Restaurant.setCurrent(restaurant!)
+            
             User.setCurrent(user)
+            
             if user.isRestaurant {
                 initialViewController = UIStoryboard.initialViewController(for: .restaurant)
             } else {
