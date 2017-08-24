@@ -12,8 +12,8 @@ class ListCellViewController: UITableViewCell {
     
     
 
-    @IBOutlet weak var NameLabel: UILabel!
-    @IBOutlet weak var Address: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var AcceptButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()

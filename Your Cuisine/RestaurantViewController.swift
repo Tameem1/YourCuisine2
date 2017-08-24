@@ -12,12 +12,14 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
     let foods = ["Burger", "Pizza", "Poteto"]
     
     var restaurant: Restaurant?
+    @IBOutlet weak var OpenCloseTimeInDetails: UILabel!
     @IBOutlet weak var RestaurantNameInDetailes: UILabel!
     
     override func viewDidLoad() {
         self.TableView.dataSource = self
         self.TableView.delegate = self
         self.RestaurantNameInDetailes.text = restaurant?.RName
+        self.OpenCloseTimeInDetails.text = restaurant?.OpenCloseTime
     }
     
     
@@ -40,7 +42,6 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foods.count
     }
-    
     
     
     

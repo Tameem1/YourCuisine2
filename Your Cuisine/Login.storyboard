@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aRW-mF-0e9">
-                                <rect key="frame" x="16" y="54" width="343" height="398.5"/>
+                                <rect key="frame" x="16" y="54" width="343" height="308"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Enter the Restaurant name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6a-V3-k7L">
@@ -72,7 +72,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ain-xf-qfH">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Like 10AM - 11PM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ain-xf-qfH">
                                         <rect key="frame" x="0.0" y="224" width="343" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="343" id="Soj-71-hii"/>
@@ -81,26 +81,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Enter when Close" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jT7-u0-h23">
-                                        <rect key="frame" x="0.0" y="274" width="147" height="20.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="147" id="WQ5-6m-gYr"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fUM-0V-mlE">
-                                        <rect key="frame" x="0.0" y="314.5" width="343" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="343" id="lEj-YB-Qbg"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOA-D3-lql">
-                                        <rect key="frame" x="0.0" y="364.5" width="343" height="34"/>
+                                        <rect key="frame" x="0.0" y="274" width="343" height="34"/>
                                         <color key="backgroundColor" red="1" green="0.76470588240000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="343" id="nEf-z3-7V6"/>
@@ -120,7 +102,6 @@
                         <outlet property="textField1" destination="zZi-3J-jfJ" id="M58-Ml-RFO"/>
                         <outlet property="textField2" destination="SS3-yL-WQ1" id="GEN-2h-5Em"/>
                         <outlet property="textField3" destination="Ain-xf-qfH" id="jBO-zR-nb0"/>
-                        <outlet property="textField4" destination="fUM-0V-mlE" id="HnX-cf-GIf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qjl-fp-eTB" userLabel="First Responder" sceneMemberID="firstResponder"/>

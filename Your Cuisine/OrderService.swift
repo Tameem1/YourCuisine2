@@ -17,7 +17,7 @@ struct OrderService {
                          "Location": Location] as [String : Any]
         
         
-        let ref = Database.database().reference().child(RestaurantId).child("Orders")
+        let ref = Database.database().reference().child("restaurants").child(RestaurantId).child("Orders").child(username)
         ref.setValue(userAttrs) { (error, ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)

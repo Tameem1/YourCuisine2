@@ -22,6 +22,8 @@ class CustomDetailsViewController: UIViewController {
         nextButton.layer.cornerRadius = 10
     }
     @IBAction func nextButtonTapped(_ sender: Any) {
+        
+        
         guard let firUser = Auth.auth().currentUser,
         let username = usernameTextField.text,
         let phoneNumber = phoneNumberTextField.text,

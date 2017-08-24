@@ -14,14 +14,31 @@
  */
 import Foundation
 import UIKit
+import FirebaseDatabase
+
 class ViewController: UITableViewController {
-    
+    var myOrders: [Orders] = []
+
     @IBOutlet var tableView2: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView2.delegate = self
         self.tableView2.dataSource = self
+        self.usernameLabel.text = myOrders?.username
+        
+
+        
+        let ref = Database.database().reference().child("Orders")
+        ref.observeSingleEvent(of: .value, with: { snapshot in
+            var newOrders: [Orders] = []
+            for child in snapshot.children {
+                let newOrder = Orders(snapshot: child as! DataSnapshot)
+                newOrders.append(newOrder!)
+            }
+            self.myOrders = newOrders.sorted(by: {$0.Order < $1.Order})
+            self.tableView.reloadData()
+        })
         
         func numberOfSections(in tableView: UITableView) -> Int {
             return 1
@@ -31,7 +48,7 @@ class ViewController: UITableViewController {
         }
     // 1
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return myOrders.count
     }
     
     // 2

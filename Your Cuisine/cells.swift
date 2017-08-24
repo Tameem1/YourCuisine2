@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 class cells: UITableViewCell {
     
+    @IBOutlet weak var OpenCloseLabel: UILabel!
     @IBOutlet weak var RestaurantNameList: UILabel!
     @IBOutlet weak var hardeezImage: UIImageView!
     

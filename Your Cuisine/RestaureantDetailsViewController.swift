@@ -27,13 +27,13 @@ class RestaureantDetailsViewController: UIViewController {
         guard let firUser = Auth.auth().currentUser,
             let RName = textField1.text,
             let RNumber = textField2.text,
-            let Open = textField3.text,
-            let Close = textField4.text,
+            let OpenCloseTime = textField3.text,
+            
             
             !RName.isEmpty,
             !RNumber.isEmpty,
-            !Open.isEmpty,
-            !Close.isEmpty
+            !OpenCloseTime.isEmpty
+        
             
             else {return}
         
@@ -49,7 +49,7 @@ class RestaureantDetailsViewController: UIViewController {
         }
         
         
-        RestaurantService.createRestaurant(firUser, RName: RName, RNumber: RNumber) { (user) in
+        RestaurantService.createRestaurant(firUser, RName: RName, RNumber: RNumber, OpenCloseTime: OpenCloseTime) { (user) in
             if let user = user {
                 Restaurant.setCurrent(user, writeToUserDefaults: true )
                 let initialViewController = UIStoryboard.initialViewController(for: .restaurant)

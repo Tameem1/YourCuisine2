@@ -11,6 +11,9 @@ import UIKit
 class OrdersViewController: UIViewController{
     
     
+    @IBOutlet weak var UserNumberInRestaurnt: UILabel!
+    @IBOutlet weak var UserAddressInRestaurnt: UILabel!
+    @IBOutlet weak var OrderInRestaurant: UILabel!
     @IBOutlet weak var orderInKitchen: UIButton!
     @IBOutlet weak var OrderInWay: UIButton!
 

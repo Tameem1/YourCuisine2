@@ -12,11 +12,11 @@ import FirebaseDatabase
 
 struct RestaurantService {
     //dfgn
-    static func createRestaurant(_ firUser: FIRUser, RName: String, RNumber: String, completion: @escaping (Restaurant?) -> Void) {
-        let userAttrs = ["RName": RName,"RNumber": RNumber]
+    static func createRestaurant(_ firUser: FIRUser, RName: String, RNumber: String, OpenCloseTime: String, completion: @escaping (Restaurant?) -> Void) {
+        let userAttrs = ["RName": RName,"RNumber": RNumber, "OpenCloseTime": OpenCloseTime]
         
         
-        let ref = Database.database().reference().child("restaurants").child(firUser.uid)
+        let ref = Database.database().reference().child("restaurants").child(RName)
         ref.setValue(userAttrs) { (error, ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)

@@ -67,6 +67,10 @@ class MyMapViewController: UIViewController, GMSPlacePickerViewControllerDelegat
 //    }
     
     @IBAction func confirmButtonTapped(_ sender: Any) {
+        
+        
+        
+        
         if label.text == "" {
             var myAlert1 = UIAlertController(title: "Error", message: "You don't pick place on the Map", preferredStyle: UIAlertControllerStyle.alert);
             let okAction1 = UIAlertAction(title: "Ok", style:UIAlertActionStyle.default)
@@ -84,12 +88,16 @@ class MyMapViewController: UIViewController, GMSPlacePickerViewControllerDelegat
             
             let okAction = UIAlertAction(title: "Ok", style:UIAlertActionStyle.default){
                 (ACTION) in
+                let userData = UserDefaults.standard.object(forKey: Constants.UserDefaults.currentUser) as? Data
+                let user = NSKeyedUnarchiver.unarchiveObject(with: userData!) as? User
+                let username = user?.username
                 
-                OrderService.create(RestaurantId: restaurantname!, username: "", Order: Order!, Location: Location!, completion: { (Order) in
+                OrderService.create(RestaurantId: restaurantname!, username: username! , Order: Order!, Location: Location!, completion: { (Order) in
                     print("the order")
                 })
                 self.performSegue(withIdentifier: Constants.Segue.toOrderStatus, sender: self)
             }
+            
             
             let cancelAction = UIAlertAction(title: "cancel", style:UIAlertActionStyle.cancel){
                 (ACTION) in

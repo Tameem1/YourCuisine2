@@ -24,6 +24,8 @@ class CustomerViewController : UIViewController , UITableViewDelegate , UITableV
         tableView.dataSource = self
         tableView.delegate = self
         
+        
+        
         let ref = Database.database().reference().child("restaurants")
         ref.observeSingleEvent(of: .value, with: { snapshot in
             var newRestaurants = [Restaurant]()
@@ -54,6 +56,7 @@ class CustomerViewController : UIViewController , UITableViewDelegate , UITableV
 //            print(indexPath.row)
 //        }
         cell.RestaurantNameList.text = restaurants[indexPath.row].RName
+        cell.OpenCloseLabel.text = restaurants[indexPath.row].OpenCloseTime
         
         cell.backgroundColor = UIColor(white:0.95,alpha: 1)
         return cell

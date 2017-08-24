@@ -163,6 +163,8 @@
 			children = (
 				DD70ABCB1F4C4DE000CAF0B8 /* MenuTableViewCell.swift */,
 				DD70ABC21F4AFB0A00CAF0B8 /* ListCellViewController.swift */,
+				DDC132DF1F445A8B00EC59CE /* cells.swift */,
+				DDC132D11F42E48300EC59CE /* DesignView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -263,8 +265,6 @@
 		DDC132D71F42F5FA00EC59CE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DDC132DF1F445A8B00EC59CE /* cells.swift */,
-				DDC132D11F42E48300EC59CE /* DesignView.swift */,
 				DDC132D51F42F5D000EC59CE /* User.swift */,
 				DD70ABBC1F4AD38C00CAF0B8 /* Restaurant.swift */,
 				DD70ABC91F4C477800CAF0B8 /* Orders.swift */,

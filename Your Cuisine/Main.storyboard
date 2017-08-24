@@ -89,6 +89,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="OpenCloseLabel" destination="HGD-84-Fq3" id="odF-LD-VQQ"/>
                                             <outlet property="RestaurantNameList" destination="5ye-7F-Omj" id="Bg5-Rk-OeU"/>
                                             <outlet property="hardeezImage" destination="iUq-5s-SP6" id="Bke-ev-m0W"/>
                                             <segue destination="s37-aP-vBT" kind="show" identifier="listToDetails" id="z3q-ez-yNF"/>
@@ -404,6 +405,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="egZ-MF-5JY"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="OpenCloseTimeInDetails" destination="sgY-is-CXW" id="yko-03-3Qt"/>
                         <outlet property="RestaurantNameInDetailes" destination="Dxx-in-pAI" id="aiO-cF-Tam"/>
                         <outlet property="TableView" destination="8iW-07-y91" id="CDj-0j-Lo8"/>
                     </connections>

@@ -24,6 +24,7 @@ struct Constants {
         static let phoneNumber = "phoneNumber"
         static let RName = "RName"
         static let RNumber = "RNumber"
+        static let OpenCloseTime = "OpenCloseTime"
         static let isRestaurant = "isRestaurant"
     }
 }
