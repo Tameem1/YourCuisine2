@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 class OrdersViewController: UIViewController{
     
+    var myOrder: Orders?
     
     @IBOutlet weak var UserNumberInRestaurnt: UILabel!
     @IBOutlet weak var UserAddressInRestaurnt: UILabel!
@@ -20,11 +21,39 @@ class OrdersViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         OrderInWay.isEnabled = false
         OrderInWay.layer.backgroundColor = UIColor(red:0.94, green:0.94, blue:0.95, alpha:1.0).cgColor
+        
+        OrderService.checkIfIsOnWay(order: myOrder!, restId: "Hardee's") { (c) -> () in
+            
+            if (c)
+            {
+                self.OrderInWay.isEnabled = false
+                self.OrderInWay.setTitle("Order is already on the way", for: .normal)
+                self.OrderInWay.backgroundColor = .red
+            }
+            
+        }
+        
+        OrderService.checkIfIsInKitchen(order: myOrder!, restId: "Hardee's") { (c) -> () in
+            
+            if (c)
+            {
+                self.orderInKitchen.isEnabled = false
+                self.orderInKitchen.setTitle("Order is Already in Kitchen", for: .normal)
+                self.orderInKitchen.backgroundColor = .red
+            }
+            
+        }
+        
+        
+        
 
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.OrderInRestaurant.text = myOrder?.Order
+        self.UserAddressInRestaurnt.text = myOrder?.Location
+        self.UserNumberInRestaurnt.text = myOrder?.phoneNumber
     }
     
     @IBAction func OrderInKitchenTapped(_ sender: Any) {
@@ -35,12 +64,16 @@ class OrdersViewController: UIViewController{
         OrderInWay.layer.backgroundColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0).cgColor
         OrderInWay.titleLabel?.textColor = UIColor.white
         OrderInWay.isEnabled = true
-        
-        
+        OrderService.orderInKitchen(order: myOrder!, restId: "Hardee's")
+
+//       OrderService.isAccepted(order: myOrder!, restId: "Hardee's") // TODO: change this to depend on actual restaurant
         
     }
-    
+
     @IBAction func OrderInWayTapped(_ sender: Any) {
+        OrderService.orderOnWay(order: myOrder!, restId: "Hardee's")
+       
+        
         print("button tapped")
     }
     

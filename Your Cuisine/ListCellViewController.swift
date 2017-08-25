@@ -11,7 +11,7 @@ import UIKit
 import FirebaseDatabase
 
 class ListCellViewController: UITableViewCell {
-    
+    var order: Orders!
     
 
     @IBOutlet weak var addressLabel: UILabel!
@@ -23,5 +23,6 @@ class ListCellViewController: UITableViewCell {
     @IBAction func AcceptButtonTapped(_ sender: Any) {
         AcceptButton.layer.backgroundColor = UIColor(red:0.96, green:0.49, blue:0.00, alpha:1.0).cgColor
         AcceptButton.setTitle("Accepted", for: .normal)
+        OrderService.isAccepted(order: order, restId: "Hardee's")
     }
 }

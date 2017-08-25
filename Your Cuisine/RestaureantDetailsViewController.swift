@@ -51,7 +51,7 @@ class RestaureantDetailsViewController: UIViewController {
         
         RestaurantService.createRestaurant(firUser, RName: RName, RNumber: RNumber, OpenCloseTime: OpenCloseTime) { (restaurant) in
             if let restaurant = restaurant {
-                Restaurant.setCurrent(restaurant, writeToUserDefaults: true )
+                Restaurant.setCurrent(restaurant, writeToUserDefaults: true)
                 let initialViewController = UIStoryboard.initialViewController(for: .restaurant)
                 self.view.window?.rootViewController = initialViewController
                 self.view.window?.makeKeyAndVisible()

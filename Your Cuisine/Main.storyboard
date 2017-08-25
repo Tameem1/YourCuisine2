@@ -123,7 +123,7 @@
         <!--Order Status-->
         <scene sceneID="N5z-l3-Elm">
             <objects>
-                <viewController id="QH8-Jf-pCe" sceneMemberID="viewController">
+                <viewController id="QH8-Jf-pCe" customClass="OrderStausViewController" customModule="Your_Cuisine" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lmz-fN-piU"/>
                         <viewControllerLayoutGuide type="bottom" id="hYo-do-DDd"/>
@@ -139,11 +139,20 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7G9-CZ-kKd">
+                                <rect key="frame" x="79" y="90" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8B-pt-aDu">
                                 <rect key="frame" x="79" y="90" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="if_true-check-accept-approve_2075831 copy copy" backgroundImage="if_check_1930264"/>
+                                <state key="normal" title="Button" image="if_true-check-accept-approve_2075831 copy copy"/>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8v4-bN-P7A">
+                                <rect key="frame" x="79" y="186" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zu6-t8-6md">
                                 <rect key="frame" x="79" y="186" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -156,6 +165,11 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3la-QI-7IE">
+                                <rect key="frame" x="79" y="282" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zT2-zy-R2l">
                                 <rect key="frame" x="79" y="282" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -172,10 +186,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Order Status" id="brw-xz-EUd"/>
+                    <connections>
+                        <outlet property="OrderInWayLabel" destination="9g3-ld-zvh" id="mSs-3u-mpx"/>
+                        <outlet property="orderAccepted" destination="ySr-ri-peQ" id="laf-z7-Tue"/>
+                        <outlet property="orderAcceptedButton" destination="A8B-pt-aDu" id="Yla-25-xdY"/>
+                        <outlet property="orderInKitchenButton" destination="zu6-t8-6md" id="tAX-Jv-pWl"/>
+                        <outlet property="orderInKitchenLabel" destination="kOg-f1-FWV" id="rYp-f6-3Yq"/>
+                        <outlet property="orderOnWayButton" destination="zT2-zy-R2l" id="uRQ-gw-bd9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l2a-fC-sv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4286" y="107"/>
+            <point key="canvasLocation" x="4285.6000000000004" y="106.59670164917542"/>
         </scene>
         <!--Set Location-->
         <scene sceneID="7Et-MO-ZKQ">
@@ -484,7 +506,6 @@
     <resources>
         <image name="empty" width="300" height="300"/>
         <image name="food_photography_burger_by_masterdev777-d3h1ryk" width="2740" height="1670"/>
-        <image name="if_check_1930264" width="128" height="128"/>
         <image name="if_true-check-accept-approve_2075831 copy copy" width="128" height="128"/>
     </resources>
 </document>

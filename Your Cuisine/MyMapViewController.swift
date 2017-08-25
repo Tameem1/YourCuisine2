@@ -23,6 +23,7 @@ class MyMapViewController: UIViewController, GMSPlacePickerViewControllerDelegat
      var restaurant: Restaurant?
 //    @IBOutlet weak var RestaurantNameInLocation: UILabel!
     var NewFood : String?
+    var newOrder: Orders?
     
     @IBOutlet weak var TheLocation: UILabel!
     @IBOutlet weak var restaurantNameLabel: UILabel!
@@ -88,11 +89,18 @@ class MyMapViewController: UIViewController, GMSPlacePickerViewControllerDelegat
             
             let okAction = UIAlertAction(title: "Ok", style:UIAlertActionStyle.default){
                 (ACTION) in
+                
+                
+                
                 let userData = UserDefaults.standard.object(forKey: Constants.UserDefaults.currentUser) as? Data
                 let user = NSKeyedUnarchiver.unarchiveObject(with: userData!) as? User
                 let username = user?.username
+                let phoneNumber = user?.phoneNumber
                 
-                OrderService.create(RestaurantId: restaurantname!, username: username! , Order: Order!, Location: Location!, completion: { (Order) in
+                
+                self.newOrder = Orders(username: username!, Order: Order!, Location: Location!, phoneNumber: phoneNumber!, orderInKitchen: false, orderAccepted: false, orderInWay: false)
+                
+                OrderService.create(RestaurantId: restaurantname!, username: username!, phoneNumber: phoneNumber! , Order: Order!, Location: Location!, orderAccepted: false , orderInKitchen: false, orderInWay: false , completion: { (Order) in
                     print("the order")
                 })
                 self.performSegue(withIdentifier: Constants.Segue.toOrderStatus, sender: self)
@@ -164,4 +172,14 @@ class MyMapViewController: UIViewController, GMSPlacePickerViewControllerDelegat
         print("No place selected")
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == Constants.Segue.toOrderStatus
+    {
+        let nextviewcontroller = segue.destination as! OrderStausViewController
+        nextviewcontroller.order = self.newOrder
+    
+        
+        }
+    }
 }

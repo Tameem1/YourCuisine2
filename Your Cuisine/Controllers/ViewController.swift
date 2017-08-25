@@ -18,7 +18,7 @@ import FirebaseDatabase
 
 class ViewController: UITableViewController {
     var myOrders: [Orders] = []
-
+     
 //    @IBOutlet var tableView2: UITableView!
     
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ class ViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        let ref = Database.database().reference().child("restaurants").child("tameem's Pizza").child("Orders")
+        let ref = Database.database().reference().child("restaurants").child("Hardee's").child("Orders")
         ref.observeSingleEvent(of: .value, with: { snapshot in
             var newOrders: [Orders] = []
             for child in snapshot.children {
@@ -50,6 +50,12 @@ class ViewController: UITableViewController {
             self.myOrders = newOrders.sorted(by: {$0.Order < $1.Order})
             self.tableView.reloadData()
         })
+        
+        
+        
+        
+        
+        
         
     }
     
@@ -63,14 +69,42 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menu", for: indexPath) as! ListCellViewController
         
+        OrderService.checkIfIsOnWay(order: myOrders[indexPath.row], restId: "Hardee's") { (c) -> () in
+            
+            if (c)
+            {
+              cell.AcceptButtonTapped(self)
+            }
+            
+        }
         
-       cell.addressLabel.text = myOrders[indexPath.row].username
+        
+        
+       cell.usernameLabel.text = myOrders[indexPath.row].username
+       cell.addressLabel.text = myOrders[indexPath.row].Location
+        cell.order = myOrders[indexPath.row]
         
       
         
         return cell
         
     }
-    @IBAction func acceptButtonTapped(_ sender: Any) {
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toOrderDetails" {
+            let destinationVC = segue.destination as! OrdersViewController
+            let index = self.tableView.indexPathForSelectedRow?.row
+            destinationVC.myOrder = self.myOrders[index!]
+        }
     }
+//    
+//    @IBAction func acceptButtonTapped(_ sender: Any) {
+////        let currentOrder = myOrders[(tableView.indexPathForSelectedRow?.row)!]
+//        
+////        OrderService.isAccepted(order: currentOrder, restId: "Hardee's")
+//        
+//        
+//    }
 }
