@@ -28,7 +28,8 @@ class OrdersViewController: UIViewController{
             {
                 self.OrderInWay.isEnabled = false
                 self.OrderInWay.setTitle("Order is already on the way", for: .normal)
-                self.OrderInWay.backgroundColor = .red
+                self.OrderInWay.backgroundColor = UIColor(red:0.96, green:0.49, blue:0.00, alpha:1.0)
+
             }
             
         }
@@ -39,7 +40,8 @@ class OrdersViewController: UIViewController{
             {
                 self.orderInKitchen.isEnabled = false
                 self.orderInKitchen.setTitle("Order is Already in Kitchen", for: .normal)
-                self.orderInKitchen.backgroundColor = .red
+                self.orderInKitchen.backgroundColor = UIColor(red:0.96, green:0.49, blue:0.00, alpha:1.0)
+
             }
             
         }
