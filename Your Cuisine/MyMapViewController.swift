@@ -25,6 +25,7 @@ class MyMapViewController: UIViewController, GMSPlacePickerViewControllerDelegat
     var NewFood : String?
     var newOrder: Orders?
     
+    @IBOutlet weak var AddressLabel: UITextField!
     @IBOutlet weak var TheLocation: UILabel!
     @IBOutlet weak var restaurantNameLabel: UILabel!
     @IBOutlet weak var TheOrder: UILabel!
@@ -86,6 +87,8 @@ class MyMapViewController: UIViewController, GMSPlacePickerViewControllerDelegat
             let restaurantname = self.restaurantNameLabel.text
             let Order = TheOrder.text
             let Location = TheLocation.text
+            let Address = AddressLabel.text
+            
             
             let okAction = UIAlertAction(title: "Ok", style:UIAlertActionStyle.default){
                 (ACTION) in
@@ -98,9 +101,9 @@ class MyMapViewController: UIViewController, GMSPlacePickerViewControllerDelegat
                 let phoneNumber = user?.phoneNumber
                 
                 
-                self.newOrder = Orders(username: username!, Order: Order!, Location: Location!, phoneNumber: phoneNumber!, orderInKitchen: false, orderAccepted: false, orderInWay: false)
+                self.newOrder = Orders(username: username!, Order: Order!, Location: Location!, phoneNumber: phoneNumber!, Address: Address!, orderInKitchen: false, orderAccepted: false, orderInWay: false)
                 
-                OrderService.create(RestaurantId: restaurantname!, username: username!, phoneNumber: phoneNumber! , Order: Order!, Location: Location!, orderAccepted: false , orderInKitchen: false, orderInWay: false , completion: { (Order) in
+                OrderService.create(RestaurantId: restaurantname!, username: username!, phoneNumber: phoneNumber! , Order: Order!, Location: Location!, Address: Address!, orderAccepted: false , orderInKitchen: false, orderInWay: false , completion: { (Order) in
                     print("the order")
                 })
                 self.performSegue(withIdentifier: Constants.Segue.toOrderStatus, sender: self)

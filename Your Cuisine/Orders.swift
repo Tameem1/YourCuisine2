@@ -13,14 +13,16 @@ struct Orders {
     let Order: String
     let Location:String
     let phoneNumber:String
+    let Address:String
     let orderAccepted:Bool
     let orderInKitchen:Bool
     let orderInWay:Bool
     
     
-    init(username: String, Order: String, Location: String, phoneNumber: String,orderInKitchen:Bool,orderAccepted:Bool,orderInWay:Bool) {
+    init(username: String, Order: String, Location: String, phoneNumber: String, Address:String, orderInKitchen:Bool,orderAccepted:Bool,orderInWay:Bool) {
         self.username = username
         self.Order = Order
+        self.Address = Address
         self.Location = Location
         self.phoneNumber = phoneNumber
         self.orderAccepted = orderAccepted
@@ -35,10 +37,11 @@ struct Orders {
             let Order = dict["Order"] as? String,
             let phoneNumber = dict["phoneNumber"] as? String,
             let Location = dict["Location"] as? String,
+            let Address = dict["Address"] as? String,
             let orderAccepted = dict["orderAccepted"] as? Bool,
             let orderInKitchen = dict["orderInKitchen"] as? Bool,
             let orderInWay = dict["orderInWay"] as? Bool
-
+  
         
 
         
@@ -47,6 +50,7 @@ struct Orders {
         
         self.username = username
         self.Order = Order
+        self.Address = Address
         self.Location = Location
         self.phoneNumber = phoneNumber
         self.orderAccepted = orderAccepted

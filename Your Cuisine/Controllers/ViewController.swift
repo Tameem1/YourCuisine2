@@ -19,7 +19,7 @@ import FirebaseDatabase
 class ViewController: UITableViewController {
     var myOrders: [Orders] = []
      
-//    @IBOutlet var tableView2: UITableView!
+    //    @IBOutlet var tableView2: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +82,7 @@ class ViewController: UITableViewController {
         
        cell.usernameLabel.text = myOrders[indexPath.row].username
        cell.addressLabel.text = myOrders[indexPath.row].Location
+       cell.AddressLabel2.text = myOrders[indexPath.row].Address
         cell.order = myOrders[indexPath.row]
         
       

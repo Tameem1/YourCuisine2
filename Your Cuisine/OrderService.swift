@@ -11,13 +11,14 @@ import FirebaseAuth.FIRUser
 import FirebaseDatabase
 
 struct OrderService {
-    static func create(RestaurantId: String, username: String, phoneNumber: String, Order: String, Location: String, orderAccepted:Bool, orderInKitchen:Bool, orderInWay:Bool, completion: @escaping (Orders?) -> Void) {
+    static func create(RestaurantId: String, username: String, phoneNumber: String, Order: String, Location: String, Address: String, orderAccepted:Bool, orderInKitchen:Bool, orderInWay:Bool, completion: @escaping (Orders?) -> Void) {
         let userAttrs = ["username": username,
                          "Order": Order,
                          "phoneNumber": phoneNumber,
                          "orderAccepted": orderAccepted,
                          "orderInKitchen": orderInKitchen,
                          "orderInWay": orderInWay,
+                         "Address": Address,
                          "Location": Location] as [String : Any]
         
         

@@ -13,6 +13,7 @@ class OrdersViewController: UIViewController{
     var myOrder: Orders?
     
     @IBOutlet weak var UserNumberInRestaurnt: UILabel!
+    @IBOutlet weak var AddressLabelInOrders: UILabel!
     @IBOutlet weak var UserAddressInRestaurnt: UILabel!
     @IBOutlet weak var OrderInRestaurant: UILabel!
     @IBOutlet weak var orderInKitchen: UIButton!
@@ -55,6 +56,7 @@ class OrdersViewController: UIViewController{
         super.viewDidLoad()
         self.OrderInRestaurant.text = myOrder?.Order
         self.UserAddressInRestaurnt.text = myOrder?.Location
+        self.AddressLabelInOrders.text = myOrder?.Address
         self.UserNumberInRestaurnt.text = myOrder?.phoneNumber
     }
     

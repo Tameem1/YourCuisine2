@@ -28,7 +28,7 @@ class OrderStausViewController : UIViewController {
         super.viewDidLoad()
         
         OrderService.checkIfIsOnWay(order: order!, restId: "Hardee's") { (c) -> () in
-            
+            self.orderAccepted.layer.backgroundColor = UIColor(red:0.94, green:0.94, blue:0.95, alpha:1.0).cgColor
         }
         
     }

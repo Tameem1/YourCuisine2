@@ -14,6 +14,7 @@ class ListCellViewController: UITableViewCell {
     var order: Orders!
     
 
+    @IBOutlet weak var AddressLabel2: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var AcceptButton: UIButton!
