@@ -456,7 +456,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="owg-4y-emK" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VlY-vz-x6X">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VlY-vz-x6X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
