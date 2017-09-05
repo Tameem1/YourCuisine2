@@ -163,8 +163,7 @@ class MyMapViewController: UIViewController, GMSPlacePickerViewControllerDelegat
         
         print("Place name \(place.name)")
         print("Place address \(place.formattedAddress)")
-        print("Place attributions \(place.attributions)")
-        
+        print("Place attributions \(place.attributions)")        
          self.label.text = "\(place.name) \n \(place.formattedAddress)"
     }
     

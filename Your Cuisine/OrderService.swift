@@ -85,7 +85,7 @@ completionHandler(snapshot.value as! Bool)
     
     static func checkIfIsOnWay(order: Orders, restId: String ,completionHandler: @escaping (Bool) -> Void ) {
         
-        let ref = Database.database().reference().child("restaurants").child("Hardee's").child("Orders").child(order.username).child("orderInWay")
+        let ref = Database.database().reference().child("restaurants").child(restId).child("Orders").child(order.username).child("orderInWay")
         ref.observeSingleEvent(of: .value, with: { snapshot in
             completionHandler(snapshot.value as! Bool)
             
